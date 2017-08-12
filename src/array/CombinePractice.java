@@ -23,11 +23,12 @@ public class CombinePractice {
     }
 
     public void backTrack(List<List<Integer>> list, List<Integer> temp,int start, int n[]){
-        list.add(new ArrayList<>(temp));        //Add new 'arraylist' to final result 'list'; add 'values' to this arraylist; e.g:list = {{},{1} ..}
-                                                //David was trying to help me with this.
+        list.add(new ArrayList<>(temp));        //David was trying to help me with this.
+                                                //Add empty 'arraylist' to final result 'list'; add 'temp' to this empty arraylist; e.g:list = {{},{1} ..}
         for(int i = start;i<n.length;i++){
             temp.add(n[i]);                     //Adds 'input array values' to 'temp' arraylist e.g: temp = {1}
             backTrack(list,temp, i+1,n);        //Start recursion; Increment the 'start' value i+1, to attach consecutive values to existing values
+                                                //e.g.attach '2' to existing {1} -> {1,2}
             temp.remove(temp.size()-1);         //Removes old values in temp through the recursion
         }
     }
