@@ -23,9 +23,9 @@ public class CombinePractice {
     }
 
     public void backTrack(List<List<Integer>> list, List<Integer> temp,int start, int n[]){
-        list.add(new ArrayList<>(temp));        //Add new array-values to the 'list' - David was trying to help me with this. e.g:list = {{},{1} ..}
+        list.add(new ArrayList<>(temp));        //Add new arraylist to the 'list' - David was trying to help me with this. e.g:list = {{},{1} ..}
         for(int i = start;i<n.length;i++){
-            temp.add(n[i]);                     //Adds input array values to array list e.g: temp = {1}
+            temp.add(n[i]);                     //Adds 'input array values' to 'temp' arraylist e.g: temp = {1}
             backTrack(list,temp, i+1,n);        //Start recursion, Increment the 'start' value i+1, to attach consecutive values to existing values
             temp.remove(temp.size()-1);         //Removes old values in temp through the recursion
         }
