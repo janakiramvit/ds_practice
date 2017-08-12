@@ -5,8 +5,8 @@ package datastructures;
  */
 public class printLeavesFromBottom {
     class node{
-        binaryTree.node left;
-        binaryTree.node right;
+        BinaryTree.node left;
+        BinaryTree.node right;
         int data;
 
         public node(int n){

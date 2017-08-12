@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/10/17.
  */
-public class permute {
+public class Permute {
 
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
@@ -26,7 +26,7 @@ public class permute {
     }
 
     public static void main(String[] args){
-        permute permute = new permute();
+        Permute permute = new Permute();
         int nums[] = {1,2};
         System.out.println(permute.subsets(nums));
     }

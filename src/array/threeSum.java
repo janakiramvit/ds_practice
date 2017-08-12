@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/7/17.
  */
-public class threeSum {
+public class ThreeSum {
 
     public List<List<Integer>> findTriplets(int s[]) {
 
@@ -39,7 +39,7 @@ public class threeSum {
     }
 
     public static void main(String[] args){
-        threeSum threeSum = new threeSum();
+        ThreeSum threeSum = new ThreeSum();
         int s[] = {-1, 0, 1, 2, -1, -4};
         Arrays.sort(s);
         List<List<Integer>> list = threeSum.findTriplets(s);

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/10/17.
  */
-public class phoneNumber {
+public class PhoneNumber {
 
     public void combo(String s1, String s2){
         char x[] = s1.toCharArray();
@@ -30,10 +30,10 @@ public class phoneNumber {
 
     public static void main(String[] args){
 
-        phoneNumber phoneNumber = new phoneNumber();
+        PhoneNumber phoneNumber = new PhoneNumber();
         String s1 = "abc";
         String s2 = "def";
-        //phoneNumber.combo(s1, s2);
+        //PhoneNumber.combo(s1, s2);
         System.out.println(phoneNumber.combo1(s1,s2));
     }
 }

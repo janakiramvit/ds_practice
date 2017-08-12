@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/10/17.
  */
-public class parentheses {
+public class Parentheses {
 
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<String>();
@@ -41,7 +41,7 @@ public class parentheses {
     }
 
     public static void main(String[] args){
-        parentheses parentheses = new parentheses();
+        Parentheses parentheses = new Parentheses();
         int n = 2;
         System.out.println(parentheses.generateParenthesis(n));
     }

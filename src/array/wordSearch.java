@@ -3,7 +3,7 @@ package array;
 /**
  * Created by jpulipati on 8/10/17.
  */
-public class wordSearch {
+public class WordSearch {
 
     public boolean exist(char[][] board, String word) {
         int m = board.length;
@@ -50,7 +50,7 @@ public class wordSearch {
     }
 
     public static void main(String[] args){
-        wordSearch wordSearch = new wordSearch();
+        WordSearch wordSearch = new WordSearch();
         char[][] board = {{'A','B'},{'S','F'}};
         String word = "ASF";
         System.out.println(wordSearch.exist(board,word));

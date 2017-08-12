@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/8/17.
  */
-public class minMoves {
+public class MinMoves {
 
     public void min(int s[]){
         System.out.println("Hello");
@@ -38,7 +38,7 @@ public class minMoves {
 
 
     public static void main(String[] args) {
-        minMoves main = new minMoves();
+        MinMoves main = new MinMoves();
         int s[] = {2,15,10};
         main.min(s);
     }

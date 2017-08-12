@@ -15,7 +15,7 @@ import java.util.Map;
     // min, max
     //least common ancestor
     //diameter
-public class binaryTree {
+public class BinaryTree {
 
     class node{
         node left;
@@ -29,7 +29,7 @@ public class binaryTree {
     }
     node root;
 
-    binaryTree(){
+    BinaryTree(){
 
     }
 
@@ -100,7 +100,7 @@ public class binaryTree {
 
     Map<String, List<Integer>> map = new HashMap<>();
 
-    public void comparator(binaryTree bt1,binaryTree bt2){
+    public void comparator(BinaryTree bt1, BinaryTree bt2){
         // roots are equal
         // get left 3 elements from left tree, get left 3 elements from right tree
         // compare
@@ -162,7 +162,7 @@ public class binaryTree {
     }
 
     public static void main(String[] args){
-        binaryTree binaryTree1 = new binaryTree();
+        BinaryTree binaryTree1 = new BinaryTree();
         binaryTree1.insert(10);
         binaryTree1.insert(11);
         binaryTree1.insert(2);
@@ -177,15 +177,15 @@ public class binaryTree {
         binaryTree1.levelOrder(binaryTree1.root);
       /*  binaryTree1.delete(5);
 
-        binaryTree binaryTree2 = new binaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
         binaryTree2.insert(10);
         binaryTree2.insert(11);
         binaryTree2.insert(2);
         binaryTree2.insert(3);
         binaryTree2.insert(5);
 
-        binaryTree binaryTree = new binaryTree();
-        binaryTree.comparator(binaryTree1,binaryTree2);*/
+        BinaryTree BinaryTree = new BinaryTree();
+        BinaryTree.comparator(binaryTree1,binaryTree2);*/
 
     }
 }

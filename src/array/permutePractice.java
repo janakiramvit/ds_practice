@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by jpulipati on 8/10/17.
  */
-public class permutePractice {
+public class PermutePractice {
 
     public List<List<Integer>> permute(int n[]){
 
@@ -28,7 +28,7 @@ public class permutePractice {
     }
 
     public static void main(String[] args){
-        permutePractice permutePractice = new permutePractice();
+        PermutePractice permutePractice = new PermutePractice();
         int n[] = {1,2};
         System.out.println(permutePractice.permute(n));
     }
