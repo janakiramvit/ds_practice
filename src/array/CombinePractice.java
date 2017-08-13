@@ -75,8 +75,8 @@ public class CombinePractice {
         * nc0 + nc1 + nc2 + .. + ncn = 2(power)n
         * So the time complexity of the backTrack() = 2pn
         * Time complexity of Sort of n elements, internally quick sort for Arrays.sort() = nlogn
-        * There are totally 2pn elements produced in the final list
-        * Time complexity of sort for 2pn set with n elements in each set = 2pn *nlogn
+        * There are totally 2pn arraylists produced in the final list
+        * Time complexity of sort for 2pn lists with n elements in each list = 2pn *nlogn
         * Therefore, total time complexity of program = t(backTrack) + t(sort) = 2pn + 2pn*nlogn =~ 2pn*nlogn
         * */
 
