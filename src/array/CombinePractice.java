@@ -21,10 +21,14 @@ public class CombinePractice {
 
         list.remove(0);                         //Remove blank array list thats present at the beginning of the final result list
 
+        for(List h: list)                       //Sort elements within list to remove redundant lists
+            Collections.sort(h);                //e.g.: To remove {1,3},{3,1}. Since this is a combination rather than permutation, one list can be removed
+
         //Fix for Duplicates test-case
         Set<List> hs = new HashSet<>();
-        hs.addAll(list);                        //Removes duplicate lists within HashSet
+        hs.addAll(list);                        //Removes duplicate/redundant lists within HashSet
         list.clear();                           //Clear the list
+
         for(List h: hs)
             list.add(h);                        //Add back non-duplicate lists from Set to 'list'
 
@@ -45,7 +49,7 @@ public class CombinePractice {
     public static void main(String[] args){
 
         CombinePractice combinePractice = new CombinePractice();
-        int[] n = {0,0,0};                        //input array
+        int[] n = {3,1,1};                        //input array
 
         /*Test cases include:
         * 1. Ideal case: n = {1,2} Result: Ideal
@@ -55,7 +59,13 @@ public class CombinePractice {
         * */
 
         /*Time complexity:
-        *
+        * The function 'backTrack(list, new ArrayList<>(),0,n)' produces combinations similar to nc0 + nc1 + nc2 + .. + ncn
+        * nc0 + nc1 + nc2 + .. + ncn = 2(power)n
+        * So the time complexity of the backTrack() = 2pn
+        * Time complexity of Sort of n elements, internally quick sort for Arrays.sort() = nlogn
+        * There are totally 2pn elements produced in the final list
+        * Time complexity of sort for 2pn set with n elements in each set = 2pn *nlogn
+        *  Therefore, total time complexity of program = t(backTrack) + t(sort) = 2pn + 2pn*nlogn =~ 2pn*nlogn
         * */
 
         System.out.println(combinePractice.combine(n));
