@@ -21,7 +21,7 @@ import java.util.*;
 * The following solution code includes:
 * 1. All relevant methods and logic required to produce combination of elements
 *   Note: Combination of elements for {3,1,1} = [[1], [1, 1], [3], [1, 1, 3], [1, 3]].
-*   It doesnt contain any duplicate lists such as [1,3],[3,1], as it's not a permutation
+*   It doesnt contain any duplicate lists such as [1,3],[3,1], as having dupes will make it a permutation
 * 2. Test Cases
 * 3. Time complexity
  */
