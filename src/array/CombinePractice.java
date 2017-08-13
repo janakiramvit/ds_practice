@@ -55,7 +55,7 @@ public class CombinePractice {
         * 1. Ideal case: n = {1,2} Result: Ideal
         * 2. Negatives: n = {-1,-2} Result: Ideal
         * 3. Duplicates: n = {0,0}/{3,1,2,1} Result: Duplicate results will be produced; fix present in code above
-        * 4. Size of array: Due to recursion there could be a possibility of Stack overflow error if array size is very large
+        * 4. Size of array: Have to check for the size of array, whether array size is very large or not
         * */
 
         /*Time complexity:
