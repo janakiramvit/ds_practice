@@ -6,11 +6,25 @@ import java.util.*;
  * Created by jpulipati on 8/11/17.
  */
 
+/**
+ * Question:
+ *  Write a program to print combinations of a given array of integers. The output should be a list of lists.
+ */
+
 /*My Approach during the interview:
     * Backtracking is the way to go for this
     * I started out with having a recursion within a 'for' loop to achieve backtracking
     * Got digressed later thinking about how to add elements to arraylist and list subsequently
-*/
+ */
+
+/*
+* The following solution code includes:
+* 1. All relevant methods and logic required to produce combination of elements
+*   Note: Combination of elements for {3,1,1} = [[1], [1, 1], [3], [1, 1, 3], [1, 3]].
+*   It doesnt contain any duplicate lists such as [1,3],[3,1], as it's not a permutation
+* 2. Test Cases
+* 3. Time complexity
+ */
 
 public class CombinePractice {
 
@@ -21,14 +35,12 @@ public class CombinePractice {
 
         list.remove(0);                         //Remove blank array list thats present at the beginning of the final result list
 
+        //Fix for Duplicates test-case
         for(List h: list)                       //Sort elements within list to remove redundant lists
             Collections.sort(h);                //e.g.: To remove {1,3},{3,1}. Since this is a combination rather than permutation, one list can be removed
-
-        //Fix for Duplicates test-case
         Set<List> hs = new HashSet<>();
         hs.addAll(list);                        //Removes duplicate/redundant lists within HashSet
         list.clear();                           //Clear the list
-
         for(List h: hs)
             list.add(h);                        //Add back non-duplicate lists from Set to 'list'
 
@@ -49,12 +61,12 @@ public class CombinePractice {
     public static void main(String[] args){
 
         CombinePractice combinePractice = new CombinePractice();
-        int[] n = {1,2,2};                        //input array
+        int[] n = {3,1,1};                        //input array
 
         /*Test cases include:
         * 1. Ideal case: n = {1,2} Result: Ideal
         * 2. Negatives: n = {-1,-2} Result: Ideal
-        * 3. Duplicates: n = {0,0}/{3,1,2,1} Result: Duplicate results will be produced; fix present in code above
+        * 3. Duplicates: n = {0,0}/{3,1,2,1} Result: Duplicate results will be produced e.g: [3,1],[1,3]; fix present in code above
         * 4. Size of array: Have to check for the size of array, whether array size is very large or not
         * */
 
