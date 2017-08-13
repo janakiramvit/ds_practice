@@ -1,7 +1,6 @@
 package array;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by jpulipati on 8/11/17.
@@ -16,9 +15,19 @@ import java.util.List;
 public class CombinePractice {
 
     public List<List<Integer>> combine(int[] n){
+
         List<List<Integer>> list = new ArrayList<>();
         backTrack(list, new ArrayList<>(),0,n);
+
         list.remove(0);                         //Remove blank array list thats present at the beginning of the final result list
+
+        //Fix for Duplicates test-case
+        Set<List> hs = new HashSet<>();
+        hs.addAll(list);                        //Removes duplicate lists within HashSet
+        list.clear();                           //Clear the list
+        for(List h: hs)
+            list.add(h);                        //Add back non-duplicate lists from Set to 'list'
+
         return list;
     }
 
@@ -34,14 +43,22 @@ public class CombinePractice {
     }
 
     public static void main(String[] args){
+
         CombinePractice combinePractice = new CombinePractice();
-        int[] n = {-3,2};                        //input array
+        int[] n = {0,0,0};                        //input array
+
         /*Test cases include:
-        * Ideal case: n = {1,2}
-        * All zeroes: n = {0,0}
-        * Negatives: n = {-1,-2}
-        * Test 'size' of the array with larger array size
+        * 1. Ideal case: n = {1,2} Result: Ideal
+        * 2. All zeroes: n = {0,0} Result: Ideal
+        * 3. Negatives: n = {-1,-2} Result: Ideal
+        * 4. Duplicates: n = {3,1,2,1} Result: Duplicate results will be produced; fix available in code above
+        * 5. Test 'size' of the array with larger array size
         * */
+
+        /*Time complexity:
+        *
+        * */
+
         System.out.println(combinePractice.combine(n));
     }
 }
