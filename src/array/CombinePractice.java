@@ -7,7 +7,7 @@ import java.util.*;
  */
 
 /*My Approach during the interview:
-    * backtracking is the way to go for this
+    * Backtracking is the way to go for this
     * I started out with having a recursion within a 'for' loop to achieve backtracking
     * Got digressed later thinking about how to add elements to arraylist and list subsequently
 */
@@ -49,7 +49,7 @@ public class CombinePractice {
     public static void main(String[] args){
 
         CombinePractice combinePractice = new CombinePractice();
-        int[] n = {3,1,1};                        //input array
+        int[] n = {1,2,2};                        //input array
 
         /*Test cases include:
         * 1. Ideal case: n = {1,2} Result: Ideal
@@ -65,7 +65,7 @@ public class CombinePractice {
         * Time complexity of Sort of n elements, internally quick sort for Arrays.sort() = nlogn
         * There are totally 2pn elements produced in the final list
         * Time complexity of sort for 2pn set with n elements in each set = 2pn *nlogn
-        *  Therefore, total time complexity of program = t(backTrack) + t(sort) = 2pn + 2pn*nlogn =~ 2pn*nlogn
+        * Therefore, total time complexity of program = t(backTrack) + t(sort) = 2pn + 2pn*nlogn =~ 2pn*nlogn
         * */
 
         System.out.println(combinePractice.combine(n));

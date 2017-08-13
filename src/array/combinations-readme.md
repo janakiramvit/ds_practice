@@ -1,9 +1,10 @@
-How to run
+###How to run
 
-IDE:
-- This is a .java file, it can pulled into the system and run from IDE.
-- Currently the input is static.
+1. From IDE:
 
-Command prompt:
-- Run javac CombinePractice.java
-- Run java CombinePractice
+    - This is a .java file, it can pulled into the system and run from IDE.
+    - Currently the input is static.
+
+2. Command prompt:
+    - Run javac CombinePractice.java
+    - Run java CombinePractice
